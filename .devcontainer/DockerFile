@@ -21,11 +21,3 @@ ENV NAME World
 
 # Run app.py when the container launches
 CMD ["python", "app.py"]
-
-FROM rust:latest
-
-# Set up non-root user
-RUN useradd -ms /bin/bash vscode
-USER vscode
-
-WORKDIR /workspace
