@@ -70,21 +70,5 @@
   }
 }
 
-{
-	"name": "Rust Development",
-	"dockerFile": "Dockerfile",
-	"extensions": [
-	  "matklad.rust-analyzer",
-	  "vadimcn.vscode-lldb"
-	],
-	"settings": {
-	  "terminal.integrated.shell.linux": "/bin/bash",
-	  "rust-analyzer.inlayHints.chainingHints": "none",
-	  "rust-analyzer.inlayHints.typeHints": "none",
-	  "rust-analyzer.inlayHints.parameterHints": "none"
-	},
-	"runArgs": ["--init"],
-	"postCreateCommand": "cargo --version"
-  }
 
   
