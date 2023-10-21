@@ -1,10 +1,11 @@
-# Data Analysis: Log GDP per Capita and Infant Mortality Rate
+# Comparison: Rust v. Python
 
 [![GitHub Actions Workflow](https://github.com/simrunsharma/MiniProjectTemplate/actions/workflows/main.yml/badge.svg)](https://github.com/simrunsharma/MiniProjectTemplate/actions/workflows/main.yml)
 
-## Data Source
+Rust adn C use approzimately 1.00 J of energy and also the time for computational performance for both is approzimately 1.00 ms. However, when we consider Python, 70 times more energy and time is being used by python, comparitvely. From a sustainability, perspective this project considers should we move from Python to Rust. Rust and Python syntax isn't too different and thus we could save budget and be thoughtful towards reaching sustainability goals. 
 
-The dataset used in this analysis is sourced from the World Development Indicators dataset for the year 2015. You can access the data from the following URL: [World Development Indicators 2015 Dataset](https://media.githubusercontent.com/media/nickeubank/MIDS_Data/master/World_Development_Indicators/wdi_small_tidy_2015.csv).
+## Functions
+The functions that I will be using is an encrypt and decrypt cipher. I have a dataset that contains 1000 fortune cookies that contain hidden messsages. These messages are hidden by using the encrypt function to encrypt each of the messages and when someone uses my setup tool called "fortune" they will be able to get a randomly generated fortune that has been take from teh encrypted database and decrypted. The purpose of this project is to try and test to see the time and energy efficiency of doing this project in rust or python.
 
 ## Code Overview
 
