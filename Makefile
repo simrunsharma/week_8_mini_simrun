@@ -1,17 +1,35 @@
-install:
+format:
+	cargo fmt --quiet
+
+lint:
+	cargo clippy --quiet
+
+test:
+	cargo test --quiet
+
+bench:
+    cargo bench
+
+run:
+	cargo run 
+
+all: format lint test run bench
+
+
+python_install:
 	pip install --upgrade pip &&\
 		pip install -r requirements.txt
 
-test:
+python_test:
 	#no testing
 
-format:	
+python_format:	
 	black *.py 
 
-deploy:
+python_deploy:
 	#deploy goes here
 
-lint:
+python_lint:
 	pylint --disable=R,C --ignore-patterns=test_.*?py *.py
 		
-all: install lint deploy format test 
+all: python_install python_lint python_deploy python_format python_test 
