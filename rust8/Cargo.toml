@@ -1,5 +1,5 @@
 [package]
-name = "caeser-cipher-cli"
+name = "rust8"
 version = "0.1.0"
 edition = "2021"
 
@@ -7,6 +7,6 @@ edition = "2021"
 
 [dependencies]
 clap = { version = "4.3.17", features = ["derive"] }
-[dev-dependencies]
-test = "0.9"
 criterion = "0.3"
+
+

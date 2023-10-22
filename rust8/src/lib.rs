@@ -4,9 +4,10 @@ The encrypt function takes a plaintext string and a shift value, and returns the
 and returns the plaintext string.
 
 */
-mod benchmarks {
-    use super::*;
-    use criterion::{black_box, Criterion};
+extern crate criterion;
+
+
+use criterion::{black_box, criterion_group, criterion_main, Criterion};
 
 pub fn encrypt(text: &str) -> String {
     let shift = 3;
@@ -27,29 +28,25 @@ pub fn decrypt(text: &str) -> String {
     encrypt(text)
 }
 
-// Benchmarks
-#[bench]
+
 fn encrypt_benchmark(c: &mut Criterion) {
-    let text = "This is a sample text to be encrypted.";
 
     c.bench_function("encrypt", |b| {
-        b.iter(|| {
-            black_box(encrypt(text));
+        b.iter(||
+            black_box(encrypt("This is a sample text to be encrypted.")))
         });
-    });
 }
 
 fn decrypt_benchmark(c: &mut Criterion) {
-    let text = "Guvf vf n fnzcyr grkg gb or rapelcgrq.";
 
     c.bench_function("decrypt", |b| {
-        b.iter(|| {
-            black_box(decrypt(text));
+        b.iter(||
+            black_box(decrypt("Guvf vf n fnzcyr grkg gb or rapelcgrq.")))
         });
-    }
+}
 
-    criterion_group!(benches, encrypt_benchmark, decrypt_benchmark);
-    criterion_main!(benches);
-}
-}
+
+
+criterion_group!(benches, encrypt_benchmark, decrypt_benchmark);
+criterion_main!(benches);
 

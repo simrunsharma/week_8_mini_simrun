@@ -11,8 +11,10 @@ cargo run --  --message "Ypp dy dro lexuob. Ofobi zobcyx pyb drowcovfoc" --decry
 */
 
 
-use caeser_cipher_cli::{decrypt, encrypt};
 use clap::Parser;
+extern crate criterion;
+
+use rust8::{decrypt, encrypt};
 
 /// CLI tool to encrypt and decrypt messages using the caeser cipher
 #[derive(Parser, Debug)]
@@ -40,9 +42,9 @@ struct Args {
 fn main() {
     let args = Args::parse();
     if args.encrypt {
-        println!("{}", encrypt(&args.message, args.shift));
+        println!("{}", encrypt(&args.message));
     } else if args.decrypt {
-        println!("{}", decrypt(&args.message, args.shift));
+        println!("{}", decrypt(&args.message));
     } else {
         println!("Please specify either --encrypt or --decrypt");
     }
