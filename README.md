@@ -1,6 +1,6 @@
 # Comparison: Rust v. Python
 
-[![GitHub Actions Workflow](https://github.com/simrunsharma/MiniProjectTemplate/actions/workflows/main.yml/badge.svg)](https://github.com/simrunsharma/MiniProjectTemplate/actions/workflows/main.yml)
+[![CI](https://github.com/simrunsharma/week_8_mini_simrun/actions/workflows/main.yml/badge.svg)](https://github.com/simrunsharma/week_8_mini_simrun/actions/workflows/main.yml)
 
 Rust and C use approzimately 1.00 J of energy and also the time for computational performance for both is approzimately 1.00 ms. However, when we consider Python, 70 times more energy and time is being used by python, comparitvely. From a sustainability, perspective this project considers should we move from Python to Rust. Rust and Python syntax isn't too different and thus we could save budget and be thoughtful towards reaching sustainability goals. 
 
@@ -19,7 +19,7 @@ For testing in Rust and Python I used criterion and pytest-benchmark. Rust took 
 ![Alt text](image.png)
 
 ## Python
-     - For testing I used pytest-benchmark for my main.py
-    - To run pytest you use pytest main.py
-    - When you run pytest you can learn the different metrics liek Mean, Min, Max, etc time it took for the code to run. 
+- For testing I used pytest-benchmark for my main.py
+- To run pytest you use pytest main.py
+- When you run pytest you can learn the different metrics liek Mean, Min, Max, etc time it took for the code to run. 
 ![Alt text](image-1.png)
